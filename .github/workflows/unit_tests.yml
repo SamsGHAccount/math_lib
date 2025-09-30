@@ -1,15 +1,16 @@
-name: Unit Tests
+name: Tests
+
 on:
   push:
   pull_request:
 
 jobs:
-  run_unit_tests:
+  run_unit_test:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - run: python test/unit/test_math_lib.py
-  run_functional_tests:
+  run_func_test:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
